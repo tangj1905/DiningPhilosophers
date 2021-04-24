@@ -16,9 +16,9 @@ public class DiningPhilosophersSimulation {
 	final static double PROBABILITY_DECAY_RATE = 0.02;			// how much will probabilities change after each unit of time in the same state?
 	
 	/* DEADLOCK HANDLING PARAMETERS */
-	final static boolean RANDOM_DROP = false;					// if false, we'll use delayed recovery instead
-	final static int RECOVERY_DELAY = 16;						// if using delayed recovery, this is how many time steps to wait...
-	final static double RANDOM_DROP_BASE_PROBABILITY = 0.02;	// if using random drop, this is the base probability of dropping a chopstick if not eating
+	final static boolean RANDOM_DROP = false;				// if false, we'll use delayed recovery instead
+	final static int RECOVERY_DELAY = 16;					// if using delayed recovery, this is how many time steps to wait...
+	final static double RANDOM_DROP_BASE_PROBABILITY = 0.02;		// if using random drop, this is the base probability of dropping a chopstick if not eating
 	
 	/* THINGS TO WRITE TO OUTPUT FILE */
 	final static boolean WRITE_TIME_STATS = false;
