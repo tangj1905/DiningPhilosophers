@@ -4,7 +4,7 @@ A simulation of the Dining Philosophers problem. Done in collaboration with acw1
 
 ## Code description
 
-Generally, the program begins by setting up the five chopsticks and the five philosophers. The 3rd philosopher (or the one sitting at index 2) is initialized as a "crazy philosopher", and we'll discuss what this means in a bit. Then, the simulation starts, running a large loop that corresponds with each time step of the Dining Philosophers simulation. For each time step, the program will do these three things:
+Generally, the program begins by setting up the five chopsticks and the five philosophers. The 3rd philosopher (or the one sitting at index 2) is initialized as a "crazy philosopher", and we'll discuss what this means in a bit. Then, the simulation starts, running a large loop that corresponds with each time step of the Dining Philosophers simulation. For each time step, the program will follow these steps:
 
 1. Shuffle the array that holds the philosophers. This way, the philosophers will be accessed in a randomized order.
 2. For each philosopher in the shuffled array, we will have the philosopher perform some action based on their current state.
