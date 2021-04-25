@@ -43,8 +43,9 @@ Finally, let's discuss our two methods of addressing deadlocks: random drops and
 
 The delayed recovery method looks for two things:
 
-1. Every philosopher is in the **WAITING_2** stage. We can guarantee that deadlocks will only happen if the philosophers are in this stage, because if there are any philosophers not in this stage, then there will always be at least one available chopstick on the table. Since philosopher 3 is a crazy philosopher, they will be able to grab this chopstick at some point and proceed. (This does bring up some question about resource starvation and such, since it's not *guaranteed* that this will occur in a timely manner, but since our model only has 5 chopsticks it's not something we decided to worry about.)
-2. Every philosopher has been waiting in this stage for at least a certain number of time steps, determined by the **RECOVERY_DELAY** parameter. This can be thought of as a kind of penalty for recovery.
+1. Every philosopher is in the **WAITING_2** stage. We can guarantee that deadlocks will only happen if the philosophers are in this stage, because if there are any philosophers not in this stage, then there will always be at least one available chopstick on the table. Since philosopher 3 is a crazy philosopher, they will be able to grab this chopstick at some point and proceed.
+   1. This does bring up some questions about resource starvation and such, since it's not *guaranteed* that this will occur in a timely manner, but since our model only has 5 chopsticks it's not something we decided to worry about.
+3. Every philosopher has been waiting in this stage for at least a certain number of time steps, determined by the **RECOVERY_DELAY** parameter. This can be thought of as a kind of penalty for recovery.
 
 Once both of these things can be found, then every philosopher drops their chopstick. Their statuses are updated to **THINKING**, and their timers are reset.
 
